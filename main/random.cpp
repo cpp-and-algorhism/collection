@@ -62,7 +62,7 @@ int main() {
     gen_array obj;
     uint32_t max(1000000);
 
-    auto arry = obj.get_int_array(100);
+    auto arry = obj.get_int_array(max);
     for (auto num : arry) {
         std::cout << num << std::endl;
     }

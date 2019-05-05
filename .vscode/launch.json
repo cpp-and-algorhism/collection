@@ -7,7 +7,7 @@
         "name": "debug main",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/build/main/fizzbuzz",
+        "program": "${workspaceFolder}/build/main/random",
         "args": [],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}/build",
