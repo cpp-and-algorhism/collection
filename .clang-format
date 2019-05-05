@@ -1,0 +1,21 @@
+BasedOnStyle: Google
+IndentWidth: 4
+
+Language: Cpp
+IndentCaseLabels: false
+AccessModifierOffset: -4
+ColumnLimit: 140
+# BreakBeforeBraces: Stroustrup
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterClass: false
+    AfterControlStatement: false
+    AfterEnum: false
+    AfterFunction: false
+    AfterNamespace: true
+    AfterStruct: true
+    AfterUnion: false
+# Clang 6 で追加
+#    AfterExternBlock: true
+    BeforeCatch: true
+    BeforeElse: true
