@@ -21,5 +21,7 @@ INCLUDE_DIRECTORIES (
 )
 
 
+set(CMAKE_CXX_FLAGS "-O0 -std=c++17 -Wall")
+
 # サブディレクトリ定義
 ADD_SUBDIRECTORY (main)
