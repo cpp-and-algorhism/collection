@@ -14,23 +14,6 @@ struct gen_array
         std::cout << __PRETTY_FUNCTION__ << std::endl;
     }
 
-    // fizzbuzz言わす
-    void say() {
-        ++count_;
-
-        if ((count_ % 3 == 0) && (count_ % 5 == 0)) {
-            std::cout << "fizzbuzz" << std::endl;
-        }
-        else if (count_ % 3 == 0) {
-            std::cout << "fizz" << std::endl;
-        }
-        else if (count_ % 5 == 0) {
-            std::cout << "buzz" << std::endl;
-        }
-        else {
-            std::cout << count_ << std::endl;
-        }
-    }
 
     std::vector<std::uint16_t> get_int_array(std::uint16_t size) {
         std::vector<std::uint16_t> result;
