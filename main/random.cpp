@@ -3,6 +3,7 @@
 #include <boost/random/random_device.hpp>
 #include <boost/timer/timer.hpp>
 #include <iostream>
+#include <set>
 
 ///
 ///
@@ -40,17 +41,29 @@ private:
 
 int main() {
     boost::timer::cpu_timer timer;  // 時間計測を開始
-    timer.start();
 
     gen_array obj;
-    uint32_t max(1000000);
+    uint32_t max(2000000);
 
     auto arry = obj.get_int_array(max);
-    for (auto num : arry) {
+    // for (auto num : arry) {
+    //     std::cout << num << std::endl;
+    // }
+    timer.start();
+    //std::vector<std::uint16_t> arry2;
+    std::multiset<std::string> arry2;
+    //arry.reserve(arry.size());
+//    std::stringstream ss;
+    for (auto &num : arry) {
+        arry2.emplace(std::to_string(num) + "test");
+    }
+    //std::sort(arry2.begin(),arry2.end());
+    timer.stop();
+    for (auto &num : arry2) {
         std::cout << num << std::endl;
     }
 
-    timer.stop();
+
     std::cout << "===============================" << std::endl;
     std::cout << " -- result -- " << timer.format(9, "%w s") << std::endl;
     std::cout << "===============================" << std::endl;

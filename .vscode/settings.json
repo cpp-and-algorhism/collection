@@ -48,6 +48,13 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "__errc": "cpp",
+        "__split_buffer": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "iomanip": "cpp",
+        "numeric": "cpp",
+        "vector": "cpp"
     }
 }
