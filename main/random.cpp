@@ -3,6 +3,7 @@
 #include <boost/random/random_device.hpp>
 #include <boost/timer/timer.hpp>
 #include <iostream>
+#include <set>
 
 ///
 ///
@@ -13,7 +14,6 @@ struct gen_array
         // __PRETTY_FUNCTION__ は事前定義マクロ
         std::cout << __PRETTY_FUNCTION__ << std::endl;
     }
-
 
     std::vector<std::uint16_t> get_int_array(std::uint16_t size) {
         std::vector<std::uint16_t> result;
@@ -43,10 +43,20 @@ int main() {
     timer.start();
 
     gen_array obj;
-    uint32_t max(1000000);
+    uint32_t max(2000000);
 
     auto arry = obj.get_int_array(max);
+    // std::vector<std::string> arry2;
+    std::set<std::string> arry2;
+    // arry2.reserve(arry.size());
+
     for (auto num : arry) {
+        arry2.emplace(std::to_string(num) + "test");
+    }
+
+    // std::sort(arry2.begin(), arry2.end());
+
+    for (auto& num : arry2) {
         std::cout << num << std::endl;
     }
 
