@@ -64,6 +64,14 @@ int main() {
         std::cout << word << std::endl;
     }
 
+    auto itr = std::find(orderd_list.begin(), orderd_list.end(), "9999_test");
+    if (itr != orderd_list.end()) {
+        std::cout << "find out!" << std::endl;
+    }
+    else {
+        std::cout << "not found" << std::endl;
+    }
+
     timer.stop();
     std::cout << "===============================" << std::endl;
     std::cout << " -- result -- " << timer.format(9, "%w s") << std::endl;
