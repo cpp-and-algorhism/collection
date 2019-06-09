@@ -64,4 +64,8 @@ int main() {
     std::cout << "===============================" << std::endl;
     std::cout << " -- result -- " << timer.format(9, "%w s") << std::endl;
     std::cout << "===============================" << std::endl;
+
+    std::cout << "===============4===============" << std::endl;
+    auto itr = arry2.find("99test");
+    std::cout << *itr << std::endl;
 }
